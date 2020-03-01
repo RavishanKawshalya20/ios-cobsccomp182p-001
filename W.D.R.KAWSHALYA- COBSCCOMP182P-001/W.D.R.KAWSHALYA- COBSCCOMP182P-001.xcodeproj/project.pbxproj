@@ -16,6 +16,7 @@
 		2F61DB042406EB590069B072 /* W_D_R_KAWSHALYA__COBSCCOMP182P_001Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61DB032406EB590069B072 /* W_D_R_KAWSHALYA__COBSCCOMP182P_001Tests.swift */; };
 		2F61DB0F2406EB590069B072 /* W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61DB0E2406EB590069B072 /* W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.swift */; };
 		2F61DB1D240748310069B072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F61DB1C240748310069B072 /* Assets.xcassets */; };
+		2F641826240AFC2200419A3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F641825240AFC2200419A3B /* GoogleService-Info.plist */; };
 		2FE2603E2409545A005F7416 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE2603D2409545A005F7416 /* LoginViewController.swift */; };
 		2FE26040240A2040005F7416 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE2603F240A2040005F7416 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		2F61DB0E2406EB590069B072 /* W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.swift; sourceTree = "<group>"; };
 		2F61DB102406EB590069B072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F61DB1C240748310069B072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
+		2F641825240AFC2200419A3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FE2603D2409545A005F7416 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2FE2603F240A2040005F7416 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 				2F61DAEF2406EB580069B072 /* Main.storyboard */,
 				2F61DB1C240748310069B072 /* Assets.xcassets */,
 				2F61DAF72406EB590069B072 /* LaunchScreen.storyboard */,
+				2F641825240AFC2200419A3B /* GoogleService-Info.plist */,
 				2F61DAFA2406EB590069B072 /* Info.plist */,
 				2F61DAF22406EB580069B072 /* W_D_R_KAWSHALYA__COBSCCOMP182P_001.xcdatamodeld */,
 			);
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F61DAF92406EB590069B072 /* LaunchScreen.storyboard in Resources */,
+				2F641826240AFC2200419A3B /* GoogleService-Info.plist in Resources */,
 				2F61DB1D240748310069B072 /* Assets.xcassets in Resources */,
 				2F61DAF12406EB580069B072 /* Main.storyboard in Resources */,
 			);

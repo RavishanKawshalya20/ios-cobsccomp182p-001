@@ -22,11 +22,15 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var phoneNumberTxt: UITextField!
     
     @IBAction func addButton(_ sender: Any) {
+        
     }
+        
     
     
     
     @IBAction func registerButton(_ sender: Any) {
+       
+        
     }
     
     
