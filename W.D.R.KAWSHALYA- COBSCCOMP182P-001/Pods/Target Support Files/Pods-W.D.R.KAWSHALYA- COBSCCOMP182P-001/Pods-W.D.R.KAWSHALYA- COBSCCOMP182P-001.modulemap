@@ -1,0 +1,6 @@
+framework module Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001 {
+  umbrella header "Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-umbrella.h"
+
+  export *
+  module * { export * }
+}

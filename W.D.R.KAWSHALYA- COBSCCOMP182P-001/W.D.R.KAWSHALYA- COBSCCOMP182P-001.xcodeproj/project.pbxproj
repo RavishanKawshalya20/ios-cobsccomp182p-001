@@ -20,6 +20,9 @@
 		2FB2F6D1240B5F6000DE6483 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2F6D0240B5F6000DE6483 /* AddEventViewController.swift */; };
 		2FE2603E2409545A005F7416 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE2603D2409545A005F7416 /* LoginViewController.swift */; };
 		2FE26040240A2040005F7416 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE2603F240A2040005F7416 /* RegisterViewController.swift */; };
+		699033660B9B31C907909E7F /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001_W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C66762D019F0C18B002D8BA /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001_W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.framework */; };
+		CB63F498ED24A7D21B483F37 /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC4B251368E51CEA51CB1E4 /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001.framework */; };
+		DF12E82847ABA7FF1BEF3BCB /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB86A3F4BAC00169E5EE244D /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05D22BC3F92E95561F425765 /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests.release.xcconfig"; path = "Target Support Files/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests.release.xcconfig"; sourceTree = "<group>"; };
+		2C66762D019F0C18B002D8BA /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001_W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001_W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E28695B0FC57E10C7E41AE7 /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests.debug.xcconfig"; path = "Target Support Files/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F22BC31240AA378009A3855 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		2F61DAE82406EB580069B072 /* W.D.R.KAWSHALYA- COBSCCOMP182P-001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "W.D.R.KAWSHALYA- COBSCCOMP182P-001.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F61DAEB2406EB580069B072 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +65,12 @@
 		2FB2F6D0240B5F6000DE6483 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		2FE2603D2409545A005F7416 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2FE2603F240A2040005F7416 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		69CF5C75A10FEF861475CAFA /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001.debug.xcconfig"; path = "Target Support Files/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001.debug.xcconfig"; sourceTree = "<group>"; };
+		9FA1412E7BC276E4F4C8B386 /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001.release.xcconfig"; path = "Target Support Files/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001.release.xcconfig"; sourceTree = "<group>"; };
+		ADD1D77D6C829274164F17E7 /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests.release.xcconfig"; path = "Target Support Files/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests.release.xcconfig"; sourceTree = "<group>"; };
+		BAC4B251368E51CEA51CB1E4 /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF722F636E5CD465C7B3376E /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests.debug.xcconfig"; path = "Target Support Files/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DB86A3F4BAC00169E5EE244D /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB63F498ED24A7D21B483F37 /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF12E82847ABA7FF1BEF3BCB /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +94,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				699033660B9B31C907909E7F /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001_W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2834DC66368A7313D5AB4624 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69CF5C75A10FEF861475CAFA /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001.debug.xcconfig */,
+				9FA1412E7BC276E4F4C8B386 /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001.release.xcconfig */,
+				CF722F636E5CD465C7B3376E /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests.debug.xcconfig */,
+				05D22BC3F92E95561F425765 /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests.release.xcconfig */,
+				2E28695B0FC57E10C7E41AE7 /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests.debug.xcconfig */,
+				ADD1D77D6C829274164F17E7 /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2F61DADF2406EB580069B072 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +122,8 @@
 				2F61DB022406EB590069B072 /* W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests */,
 				2F61DB0D2406EB590069B072 /* W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests */,
 				2F61DAE92406EB580069B072 /* Products */,
+				2834DC66368A7313D5AB4624 /* Pods */,
+				EC50566A20657A16AC4C0C22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +182,16 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		EC50566A20657A16AC4C0C22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAC4B251368E51CEA51CB1E4 /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001.framework */,
+				2C66762D019F0C18B002D8BA /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001_W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.framework */,
+				DB86A3F4BAC00169E5EE244D /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F61DB132406EB590069B072 /* Build configuration list for PBXNativeTarget "W.D.R.KAWSHALYA- COBSCCOMP182P-001" */;
 			buildPhases = (
+				D7398B06B3AD07D363F477AB /* [CP] Check Pods Manifest.lock */,
 				2F61DAE42406EB580069B072 /* Sources */,
 				2F61DAE52406EB580069B072 /* Frameworks */,
 				2F61DAE62406EB580069B072 /* Resources */,
+				47083AA33BACC56EC7DF9421 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,6 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F61DB162406EB590069B072 /* Build configuration list for PBXNativeTarget "W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests" */;
 			buildPhases = (
+				B66FF11575BA256182CA1E91 /* [CP] Check Pods Manifest.lock */,
 				2F61DAFB2406EB590069B072 /* Sources */,
 				2F61DAFC2406EB590069B072 /* Frameworks */,
 				2F61DAFD2406EB590069B072 /* Resources */,
@@ -193,9 +237,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F61DB192406EB590069B072 /* Build configuration list for PBXNativeTarget "W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests" */;
 			buildPhases = (
+				6EF21B0769A22942E417A547 /* [CP] Check Pods Manifest.lock */,
 				2F61DB062406EB590069B072 /* Sources */,
 				2F61DB072406EB590069B072 /* Frameworks */,
 				2F61DB082406EB590069B072 /* Resources */,
+				7E644C8B47BFA7ED2888C545 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,6 +326,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47083AA33BACC56EC7DF9421 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EF21B0769A22942E417A547 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E644C8B47BFA7ED2888C545 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B66FF11575BA256182CA1E91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7398B06B3AD07D363F477AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F61DAE42406EB580069B072 /* Sources */ = {
@@ -465,6 +614,7 @@
 		};
 		2F61DB142406EB590069B072 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69CF5C75A10FEF861475CAFA /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -482,6 +632,7 @@
 		};
 		2F61DB152406EB590069B072 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FA1412E7BC276E4F4C8B386 /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +650,7 @@
 		};
 		2F61DB172406EB590069B072 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E28695B0FC57E10C7E41AE7 /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +671,7 @@
 		};
 		2F61DB182406EB590069B072 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADD1D77D6C829274164F17E7 /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -539,6 +692,7 @@
 		};
 		2F61DB1A2406EB590069B072 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF722F636E5CD465C7B3376E /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -558,6 +712,7 @@
 		};
 		2F61DB1B2406EB590069B072 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05D22BC3F92E95561F425765 /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

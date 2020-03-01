@@ -71,6 +71,10 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="mi8-Ct-1uU" firstAttribute="centerX" secondItem="pDf-uO-7El" secondAttribute="centerX" id="Eiu-bV-SOR"/>
+                                    <constraint firstItem="mi8-Ct-1uU" firstAttribute="centerY" secondItem="pDf-uO-7El" secondAttribute="centerY" id="tcC-hz-EDe"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b8C-2X-Aor">
                                 <rect key="frame" x="52" y="304" width="267" height="167"/>
@@ -324,14 +328,15 @@
                                             <constraint firstAttribute="width" constant="328" id="c1S-yr-phn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Register">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <action selector="registerButton:" destination="iOE-uE-M3D" eventType="touchUpInside" id="keW-iU-nsv"/>
-                                        </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="eqV-O1-aqL" firstAttribute="centerX" secondItem="cx3-X7-REk" secondAttribute="centerX" id="5c6-Gm-6Gg"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mcz-OQ-36B">
                                 <rect key="frame" x="108" y="103" width="159" height="177"/>
@@ -353,6 +358,9 @@
                                         <state key="normal" title="Upload an Image">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="uploadImageBtn:" destination="iOE-uE-M3D" eventType="touchUpInside" id="5FT-lA-VKG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -376,10 +384,14 @@
                         <viewLayoutGuide key="safeArea" id="N4K-Em-cwI"/>
                     </view>
                     <connections>
+                        <outlet property="confPasswordTxt" destination="iSk-cH-mJk" id="R5e-rb-fRP"/>
                         <outlet property="confirmPasswordTxt" destination="hWO-8H-7HN" id="zFG-FB-ihJ"/>
+                        <outlet property="fbUrlTxt" destination="UX1-93-jlQ" id="MjU-88-JFv"/>
                         <outlet property="lastNameTxt" destination="n3m-zC-35F" id="BS2-ZQ-cNz"/>
-                        <outlet property="passwordTxt" destination="UX1-93-jlQ" id="c5H-GI-bMl"/>
+                        <outlet property="passowrdTxr" destination="hWO-8H-7HN" id="RGN-l9-Dp8"/>
                         <outlet property="phoneNumberTxt" destination="weq-CC-9jG" id="grf-8a-YzQ"/>
+                        <outlet property="regBtn2" destination="eqV-O1-aqL" id="4Sh-V8-gW1"/>
+                        <outlet property="regbtn" destination="0NE-hl-cwW" id="gKM-rX-2dJ"/>
                         <outlet property="userNameTxt" destination="mJo-yY-vhj" id="VDl-y4-5fc"/>
                     </connections>
                 </viewController>
@@ -665,11 +677,11 @@
                                 <rect key="frame" x="68" y="101" width="240" height="177"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9bj-xz-kKI">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="144"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7N6-Q8-5HJ">
-                                        <rect key="frame" x="0.0" y="144" width="240" height="33"/>
+                                        <rect key="frame" x="0.0" y="50" width="240" height="127"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="tintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Upload an Image">

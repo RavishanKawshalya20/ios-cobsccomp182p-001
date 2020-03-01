@@ -1,0 +1,6 @@
+framework module Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001_W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests {
+  umbrella header "Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001-W.D.R.KAWSHALYA- COBSCCOMP182P-001UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

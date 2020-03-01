@@ -10,20 +10,23 @@ import UIKit
 
 class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-   
+    @IBOutlet weak var fbUrlTxt: UITextField!
+    
+    @IBOutlet weak var regBtn2: UIButton!
+    @IBOutlet weak var regbtn: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var firstNameTxt: UITextField!
     
+    @IBOutlet weak var confPasswordTxt: UITextField!
+    @IBOutlet weak var passowrdTxr: UITextField!
     @IBOutlet weak var confirmPasswordTxt: UITextField!
     @IBOutlet weak var lastNameTxt: UITextField!
     
-    @IBOutlet weak var passwordTxt: UITextField!
+    
     @IBOutlet weak var userNameTxt: UITextField!
     @IBOutlet weak var phoneNumberTxt: UITextField!
     
-    @IBAction func addButton(_ sender: Any) {
-        
-    }
+    
         
     @IBAction func uploadImageBtn(_ sender: Any) {
         
@@ -40,7 +43,9 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
             }
             else{
                 
-                print("Camera Not Available")
+               print("Camera Not Available")
+                
+              
             }
             
             
@@ -70,30 +75,53 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         picker.dismiss(animated: true, completion: nil )
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
     
-    }
+//    }
     
     
     
     @IBAction func registerButton(_ sender: Any) {
        
+        let alert = UIAlertController(title: "Alert", message: "Do you want To save?", preferredStyle: .alert)
+        
+        let alertAction = UIAlertAction(title: "Ok", style : .default ,handler : nil)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style : .cancel ,handler : nil)
+        
+        alert.addAction(alertAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true, completion: nil)
+
         
     }
+    
+    
     
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.regBtn2.layer.cornerRadius = 23
+        self.userNameTxt.layer.cornerRadius = 10
+// self.firstNameTxt.layer.cornerRadius = 10
+        self.lastNameTxt.layer.cornerRadius=10
+        self.phoneNumberTxt.layer.cornerRadius = 10
+        self.passowrdTxr.layer.cornerRadius = 10
+        self.confPasswordTxt.layer.cornerRadius = 10
+        
+        
+        
         // Do any additional setup after loading the view.
-    
-
         
     }
-    
+    override func didReceiveMemoryWarning(){
+        super.didReceiveMemoryWarning()
+    }
 
     /*
     // MARK: - Navigation
