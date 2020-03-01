@@ -78,7 +78,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b8C-2X-Aor">
-                                <rect key="frame" x="52" y="304" width="267" height="167"/>
+                                <rect key="frame" x="52" y="284" width="267" height="167"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="User Name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lhx-CN-zkS">
                                         <rect key="frame" x="0.0" y="0.0" width="267" height="45"/>
@@ -145,8 +145,8 @@
                                     <segue destination="iOE-uE-M3D" kind="show" id="Wgg-Dd-ohV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GJ-VP-FoK">
-                                <rect key="frame" x="183" y="489" width="136" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GJ-VP-FoK">
+                                <rect key="frame" x="183" y="471" width="136" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="sDA-C7-M5Q"/>
                                     <constraint firstAttribute="width" constant="136" id="uZx-tO-IUz"/>
@@ -164,30 +164,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="b8C-2X-Aor" firstAttribute="leading" secondItem="oAC-vY-RPl" secondAttribute="leading" constant="52" id="07A-cx-eLN"/>
-                            <constraint firstItem="3cG-2t-OjB" firstAttribute="top" secondItem="9GJ-VP-FoK" secondAttribute="bottom" constant="171" id="1bn-hD-YYk"/>
-                            <constraint firstItem="oAC-vY-RPl" firstAttribute="bottom" secondItem="2kn-BQ-gJF" secondAttribute="bottom" constant="5" id="3MO-4X-TP6"/>
-                            <constraint firstItem="9GJ-VP-FoK" firstAttribute="top" secondItem="b8C-2X-Aor" secondAttribute="bottom" constant="18" id="65Z-Rc-YyH"/>
-                            <constraint firstItem="9GJ-VP-FoK" firstAttribute="leading" secondItem="oAC-vY-RPl" secondAttribute="leading" constant="183" id="9Hh-nM-Yjv"/>
-                            <constraint firstItem="xx2-iS-gle" firstAttribute="leading" secondItem="oAC-vY-RPl" secondAttribute="leading" id="9mg-gf-vzK"/>
-                            <constraint firstItem="2kn-BQ-gJF" firstAttribute="top" secondItem="9GJ-VP-FoK" secondAttribute="bottom" constant="165" id="Cfq-sj-j6s"/>
-                            <constraint firstItem="b8C-2X-Aor" firstAttribute="top" secondItem="pDf-uO-7El" secondAttribute="bottom" constant="40" id="EUr-G6-iHD"/>
-                            <constraint firstItem="oAC-vY-RPl" firstAttribute="trailing" secondItem="9GJ-VP-FoK" secondAttribute="trailing" constant="56" id="IBT-Vv-enu"/>
-                            <constraint firstItem="3cG-2t-OjB" firstAttribute="leading" secondItem="oAC-vY-RPl" secondAttribute="leading" constant="28" id="Kes-FY-tGd"/>
-                            <constraint firstItem="9GJ-VP-FoK" firstAttribute="top" secondItem="b8C-2X-Aor" secondAttribute="bottom" constant="18" id="LxY-iR-Jkx"/>
-                            <constraint firstItem="2kn-BQ-gJF" firstAttribute="leading" secondItem="3cG-2t-OjB" secondAttribute="trailing" constant="6" id="NJb-ew-izC"/>
-                            <constraint firstAttribute="bottom" secondItem="xx2-iS-gle" secondAttribute="bottom" id="NSz-DL-Zxi"/>
-                            <constraint firstItem="xx2-iS-gle" firstAttribute="trailing" secondItem="oAC-vY-RPl" secondAttribute="trailing" id="NgO-Fn-gIF"/>
-                            <constraint firstItem="oAC-vY-RPl" firstAttribute="trailing" secondItem="pDf-uO-7El" secondAttribute="trailing" constant="89" id="Pai-Qk-Qba"/>
-                            <constraint firstItem="oAC-vY-RPl" firstAttribute="trailing" secondItem="2kn-BQ-gJF" secondAttribute="trailing" constant="46" id="TWn-NF-Ro1"/>
-                            <constraint firstItem="oAC-vY-RPl" firstAttribute="trailing" secondItem="b8C-2X-Aor" secondAttribute="trailing" constant="56" id="XQL-sp-HIK"/>
-                            <constraint firstItem="b8C-2X-Aor" firstAttribute="top" secondItem="pDf-uO-7El" secondAttribute="bottom" constant="40" id="aLs-lB-kS5"/>
-                            <constraint firstItem="xx2-iS-gle" firstAttribute="top" secondItem="oAC-vY-RPl" secondAttribute="top" id="aaI-X3-jWq"/>
-                            <constraint firstItem="oAC-vY-RPl" firstAttribute="bottom" secondItem="3cG-2t-OjB" secondAttribute="bottom" constant="11" id="amc-Jw-Ugg"/>
-                            <constraint firstItem="2kn-BQ-gJF" firstAttribute="leading" secondItem="3cG-2t-OjB" secondAttribute="trailing" constant="6" id="cgN-PW-Bkq"/>
-                            <constraint firstItem="pDf-uO-7El" firstAttribute="leading" secondItem="oAC-vY-RPl" secondAttribute="leading" constant="85" id="rzW-gy-pkb"/>
-                            <constraint firstItem="2kn-BQ-gJF" firstAttribute="top" secondItem="9GJ-VP-FoK" secondAttribute="bottom" constant="165" id="sIa-Ka-L9L"/>
-                            <constraint firstItem="pDf-uO-7El" firstAttribute="top" secondItem="oAC-vY-RPl" secondAttribute="top" constant="72" id="xP6-hf-Kzp"/>
+                            <constraint firstItem="b8C-2X-Aor" firstAttribute="leading" secondItem="oAC-vY-RPl" secondAttribute="leading" constant="52" id="62y-mW-1uZ"/>
+                            <constraint firstItem="xx2-iS-gle" firstAttribute="trailing" secondItem="oAC-vY-RPl" secondAttribute="trailing" id="80H-vf-aSG"/>
+                            <constraint firstItem="oAC-vY-RPl" firstAttribute="trailing" secondItem="pDf-uO-7El" secondAttribute="trailing" constant="89" id="8uf-oF-cza"/>
+                            <constraint firstItem="xx2-iS-gle" firstAttribute="leading" secondItem="oAC-vY-RPl" secondAttribute="leading" id="ApD-cV-82b"/>
+                            <constraint firstItem="3cG-2t-OjB" firstAttribute="leading" secondItem="oAC-vY-RPl" secondAttribute="leading" constant="28" id="CVx-B7-WXi"/>
+                            <constraint firstItem="2kn-BQ-gJF" firstAttribute="top" secondItem="9GJ-VP-FoK" secondAttribute="bottom" constant="183" id="HkB-sV-F6N"/>
+                            <constraint firstItem="pDf-uO-7El" firstAttribute="top" secondItem="oAC-vY-RPl" secondAttribute="top" constant="72" id="M79-mg-4eV"/>
+                            <constraint firstItem="2kn-BQ-gJF" firstAttribute="leading" secondItem="3cG-2t-OjB" secondAttribute="trailing" constant="6" id="MGn-gO-VpM"/>
+                            <constraint firstItem="oAC-vY-RPl" firstAttribute="trailing" secondItem="b8C-2X-Aor" secondAttribute="trailing" constant="56" id="VoT-T3-4b8"/>
+                            <constraint firstItem="oAC-vY-RPl" firstAttribute="bottom" secondItem="2kn-BQ-gJF" secondAttribute="bottom" constant="5" id="YeZ-zr-tsc"/>
+                            <constraint firstItem="b8C-2X-Aor" firstAttribute="top" secondItem="pDf-uO-7El" secondAttribute="bottom" constant="20" id="cce-Bc-ZhU"/>
+                            <constraint firstItem="xx2-iS-gle" firstAttribute="top" secondItem="oAC-vY-RPl" secondAttribute="top" id="dJQ-nh-QRA"/>
+                            <constraint firstItem="oAC-vY-RPl" firstAttribute="trailing" secondItem="2kn-BQ-gJF" secondAttribute="trailing" constant="46" id="hEu-5k-WGV"/>
+                            <constraint firstItem="9GJ-VP-FoK" firstAttribute="top" secondItem="b8C-2X-Aor" secondAttribute="bottom" constant="20" id="lTG-fr-RVP"/>
+                            <constraint firstItem="oAC-vY-RPl" firstAttribute="bottom" secondItem="3cG-2t-OjB" secondAttribute="bottom" constant="11" id="m9a-D4-QNN"/>
+                            <constraint firstItem="3cG-2t-OjB" firstAttribute="top" secondItem="9GJ-VP-FoK" secondAttribute="bottom" constant="189" id="mIq-cj-KQx"/>
+                            <constraint firstItem="2kn-BQ-gJF" firstAttribute="leading" secondItem="3cG-2t-OjB" secondAttribute="trailing" constant="6" id="q2l-Yw-zPv"/>
+                            <constraint firstItem="b8C-2X-Aor" firstAttribute="top" secondItem="pDf-uO-7El" secondAttribute="bottom" constant="20" id="rI9-TD-NUs"/>
+                            <constraint firstItem="pDf-uO-7El" firstAttribute="leading" secondItem="oAC-vY-RPl" secondAttribute="leading" constant="85" id="rLy-Oi-LHh"/>
+                            <constraint firstAttribute="bottom" secondItem="xx2-iS-gle" secondAttribute="bottom" id="wTo-S7-JE0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oAC-vY-RPl"/>
                     </view>
@@ -202,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYN-wC-eU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2504.8000000000002" y="115.27093596059113"/>
+            <point key="canvasLocation" x="2414" y="98"/>
         </scene>
         <!--Register Page-->
         <scene sceneID="HZz-Bk-NBN">
