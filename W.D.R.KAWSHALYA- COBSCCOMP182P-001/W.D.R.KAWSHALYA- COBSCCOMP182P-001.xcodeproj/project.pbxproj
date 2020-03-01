@@ -17,6 +17,7 @@
 		2F61DB0F2406EB590069B072 /* W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61DB0E2406EB590069B072 /* W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.swift */; };
 		2F61DB1D240748310069B072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F61DB1C240748310069B072 /* Assets.xcassets */; };
 		2F641826240AFC2200419A3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F641825240AFC2200419A3B /* GoogleService-Info.plist */; };
+		2FB2F6D1240B5F6000DE6483 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2F6D0240B5F6000DE6483 /* AddEventViewController.swift */; };
 		2FE2603E2409545A005F7416 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE2603D2409545A005F7416 /* LoginViewController.swift */; };
 		2FE26040240A2040005F7416 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE2603F240A2040005F7416 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		2F61DB102406EB590069B072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F61DB1C240748310069B072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		2F641825240AFC2200419A3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2FB2F6D0240B5F6000DE6483 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		2FE2603D2409545A005F7416 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2FE2603F240A2040005F7416 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +146,7 @@
 				2FE2603D2409545A005F7416 /* LoginViewController.swift */,
 				2FE2603F240A2040005F7416 /* RegisterViewController.swift */,
 				2F22BC31240AA378009A3855 /* ForgetPasswordViewController.swift */,
+				2FB2F6D0240B5F6000DE6483 /* AddEventViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				2FE26040240A2040005F7416 /* RegisterViewController.swift in Sources */,
 				2F61DAF42406EB580069B072 /* W_D_R_KAWSHALYA__COBSCCOMP182P_001.xcdatamodeld in Sources */,
 				2F61DAEE2406EB580069B072 /* ViewController.swift in Sources */,
+				2FB2F6D1240B5F6000DE6483 /* AddEventViewController.swift in Sources */,
 				2F22BC32240AA378009A3855 /* ForgetPasswordViewController.swift in Sources */,
 				2F61DAEC2406EB580069B072 /* AppDelegate.swift in Sources */,
 			);

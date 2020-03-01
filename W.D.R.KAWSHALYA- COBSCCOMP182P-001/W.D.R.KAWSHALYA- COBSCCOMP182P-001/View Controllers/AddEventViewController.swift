@@ -1,42 +1,35 @@
 //
-//  RegisterViewController.swift
+//  AddEventViewController.swift
 //  W.D.R.KAWSHALYA- COBSCCOMP182P-001
 //
-//  Created by Ravishan Kawshalya on 29/02/2020.
+//  Created by Ravishan Kawshalya on 01/03/2020.
 //  Copyright © 2020 Ravishan Kawshalya. All rights reserved.
 //
 
 import UIKit
 
-class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddEventViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
    
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var firstNameTxt: UITextField!
+    @IBOutlet weak var eventImageView: UIImageView!
+    @IBOutlet weak var descriptionEventTxt: UITextView!
+    @IBOutlet weak var eventTitleTxt: UITextField!
     
-    @IBOutlet weak var confirmPasswordTxt: UITextField!
-    @IBOutlet weak var lastNameTxt: UITextField!
     
-    @IBOutlet weak var passwordTxt: UITextField!
-    @IBOutlet weak var userNameTxt: UITextField!
-    @IBOutlet weak var phoneNumberTxt: UITextField!
-    
-    @IBAction func addButton(_ sender: Any) {
+  
+    @IBAction func insertEventImageBtn(_ sender: Any) {
         
-    }
-        
-    @IBAction func uploadImageBtn(_ sender: Any) {
         
         let imagePickerController = UIImagePickerController()
         
-        let actionSheet = UIAlertController(title: "Photo Source", message: "Choose Image Source", preferredStyle: .actionSheet)
+        let actionSheet2 = UIAlertController(title: "Photo Source", message: "Capture Image", preferredStyle: .actionSheet)
         
-        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default , handler: { (UIAlertAction) in
+        actionSheet2.addAction(UIAlertAction(title: "Camera", style: .default , handler: { (UIAlertAction) in
             
             if(UIImagePickerController.isSourceTypeAvailable(.camera)){
-            
-            imagePickerController.sourceType = .camera
-            self.present(imagePickerController, animated: true, completion: nil)
+                
+                imagePickerController.sourceType = .camera
+                self.present(imagePickerController, animated: true, completion: nil)
             }
             else{
                 
@@ -46,14 +39,14 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
             
         }))
         
-        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default , handler: { (UIAlertAction) in
-            imagePickerController.sourceType = .photoLibrary
-            self.present(actionSheet, animated: true, completion: nil)
-        }))
+//        actionSheet2.addAction(UIAlertAction(title: "Photo Library", style: .default , handler: { (UIAlertAction) in
+//            imagePickerController.sourceType = .photoLibrary
+//            self.present(actionSheet2, animated: true, completion: nil)
+//        }))
         
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel , handler: nil ))
+        actionSheet2.addAction(UIAlertAction(title: "Cancel", style: .cancel , handler: nil ))
         
-        self.present(actionSheet, animated: true, completion: nil)
+        self.present(actionSheet2, animated: true, completion: nil)
         
     }
     
@@ -61,7 +54,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         
-        imageView.image = image
+        eventImageView.image = image
         
         picker.dismiss(animated: true, completion: nil )
     }
@@ -72,26 +65,19 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    
     }
     
     
     
-    @IBAction func registerButton(_ sender: Any) {
-       
+    
+    @IBAction func addEventBtn(_ sender: Any) {
         
     }
     
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    
-
-        
     }
     
 
