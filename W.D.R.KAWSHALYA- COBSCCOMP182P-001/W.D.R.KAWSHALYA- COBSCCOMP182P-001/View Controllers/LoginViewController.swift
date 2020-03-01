@@ -54,8 +54,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
            // return nil
         //}
         
-       
+        let username = usernameTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
+   //     Auth.auth().signIn(withEmail: email, password: password){ (result, error) in
+            
+//            if error != nil{
+//                self.errorLabel.text = error!.localizedDescription
+//                self.errorLabel.alpha = 1
+//
+//            }
+//            else{
+//                let homeViewController = storyboard?.instantiateInitialViewController(identifier: Constants.storyboard.homeViewController) as? homeViewController
+//
+//                view.window?.roadViewController = homeViewController
+//                view.window?.makeKeyAndVisible()
+//
+//            }
+        
+       
+        //}
     }
     
     

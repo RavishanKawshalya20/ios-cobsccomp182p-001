@@ -601,6 +601,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="EditButton:" destination="KZG-vi-skO" eventType="editingDidEnd" id="t5I-np-PvG"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEe-1A-WQ2">
                                         <rect key="frame" x="0.0" y="263" width="266" height="30"/>
@@ -637,8 +640,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="User Profile" id="Axd-kN-MeE"/>
                     <connections>
+                        <outlet property="edirButton2" destination="SEe-1A-WQ2" id="tN5-oi-Ewc"/>
+                        <outlet property="editButton" destination="SEe-1A-WQ2" id="Ocx-Sv-Md3"/>
+                        <outlet property="fbURL" destination="hqA-dB-kc9" id="7XQ-DB-74U"/>
                         <outlet property="fname" destination="jju-Di-Abj" id="n0y-w8-K9Q"/>
                         <outlet property="lname" destination="9Pt-Tt-5Xd" id="PMC-Oh-p6A"/>
+                        <outlet property="phonenum" destination="yup-5V-nuZ" id="lzV-SX-WkE"/>
                         <outlet property="userImage" destination="hOs-Ss-l99" id="4IM-KX-FmX"/>
                     </connections>
                 </viewController>

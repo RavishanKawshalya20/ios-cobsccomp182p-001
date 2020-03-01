@@ -10,26 +10,31 @@ import UIKit
 
 class UseerProfileViewController: UIViewController {
 
-    @IBOutlet weak var phone: UITextField!
+    @IBOutlet weak var editButton: UIButton!
+  //  @IBOutlet weak var phone: UITextField!
     @IBOutlet weak var editBtn: UIButton!
-    @IBOutlet weak var fbUrl: UITextField!
+    //@IBOutlet weak var fbUrl: UITextField!
     @IBOutlet weak var lname: UITextField!
     @IBOutlet weak var fname: UITextField!
     @IBOutlet weak var userImage: UIImageView!
     
+    @IBOutlet weak var edirButton2: UIButton!
+   // @IBOutlet weak var editButton2: UIButton!
+    @IBOutlet weak var phonenum: UITextField!
     
+    @IBOutlet weak var fbURL: UITextField!
     @IBAction func EditButton(_ sender: Any) {
         
         
     }
     override func viewDidLoad() {
         
-        self.editBtn.layer.cornerRadius = 10
+        self.editButton.layer.cornerRadius = 10
         self.fname.layer.cornerRadius = 10
         self.lname.layer.cornerRadius = 10
-        self.fbUrl.layer.cornerRadius = 10
-        self.phone.layer.cornerRadius = 10
-        self.editBtn.layer.cornerRadius = 10
+        self.fbURL.layer.cornerRadius = 10
+        self.phonenum.layer.cornerRadius = 10
+        self.edirButton2.layer.cornerRadius = 10
         self.userImage.layer.cornerRadius = 10
         
         super.viewDidLoad()

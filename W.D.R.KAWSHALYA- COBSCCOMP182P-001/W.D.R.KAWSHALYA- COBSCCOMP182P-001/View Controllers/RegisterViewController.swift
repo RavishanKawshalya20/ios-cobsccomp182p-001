@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import Foundation
 
 
 
@@ -112,6 +113,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
             
         }
         
+        else{
         let cleanedPassword = passowrdTxr.text!.trimmingCharacters(in: .whitespacesAndNewlines)
  
         func isPasswordValid(_ password : String) -> Bool{
@@ -143,29 +145,43 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         let pwd = passowrdTxr.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         //let image = imageView.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        Auth.auth().createUser(withEmail: uname, password: pwd ) { (result, err) in
+        Auth.auth().createUser(withEmail: uname, password: pwd ) { user, error in
             
             
-            if err != nil{
+            if error == nil && uname != nil{
                 
-              print("error")
+              print("User Created")
+                
+                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                changeRequest?.displayName = uname
+                changeRequest?.commitChanges{ error in
+                
+                    if error == nil{
+                        print("User Display Name Changed")
+                    }
+                
+                }
                 
             }
             else{
                 
-                let db = Firestore.firestore()
+                print("Error Creating User")
+                self.dismiss(animated: false, completion: nil)
                 
-                db.collection("users").addDocument(data: ["firstname" : fname, "lastname": lname]) { (error) in}
-                
-                if err != nil{
-                    print("error")
-                }
+//                let db = Firestore.firestore()
+//
+//                db.collection("users").addDocument(data: ["firstname" : fname, "lastname": lname]) { (error) in}
+//
+//                if error != nil{
+//                    print("error")
+//                }
             }
          self.transitionToHome()
             
         }
         
     }
+}
     
     func showError(_ message:String){
         
