@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var loginbtnRadius: UIButton!
     //@IBOutlet weak var loginBtnR: UIButton!
@@ -67,12 +67,14 @@ class LoginViewController: UIViewController {
         self.usernameTxt.layer.cornerRadius = 25.0
         self.passwordTxt.layer.cornerRadius = 25.0
         self.imageView.layer.cornerRadius = 25.0
+        
         super.viewDidLoad()
         
-        
-        
-
         // Do any additional setup after loading the view.
+    }
+    
+     func touchesBagan(_ touches: Set<UITouch>, with event: UIEvent? ){
+        self.view.endEditing(true)
     }
     
 

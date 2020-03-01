@@ -24,13 +24,13 @@ class UseerProfileViewController: UIViewController {
     }
     override func viewDidLoad() {
         
-//        self.editBtn.layer.cornerRadius = 25.0
-//        self.fname.layer.cornerRadius = 25.0
-//        self.lname.layer.cornerRadius = 25.0
-//        self.fbUrl.layer.cornerRadius = 25.0
-//        self.phone.layer.cornerRadius = 25.0
-//        self.editBtn.layer.cornerRadius = 25.0
-//        self.userImage.layer.cornerRadius = 25.0
+        self.editBtn.layer.cornerRadius = 10
+        self.fname.layer.cornerRadius = 10
+        self.lname.layer.cornerRadius = 10
+        self.fbUrl.layer.cornerRadius = 10
+        self.phone.layer.cornerRadius = 10
+        self.editBtn.layer.cornerRadius = 10
+        self.userImage.layer.cornerRadius = 10
         
         super.viewDidLoad()
 

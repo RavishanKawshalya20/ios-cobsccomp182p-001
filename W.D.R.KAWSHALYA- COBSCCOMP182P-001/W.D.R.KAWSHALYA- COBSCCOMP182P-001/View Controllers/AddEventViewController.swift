@@ -77,12 +77,12 @@ class AddEventViewController: UIViewController , UIImagePickerControllerDelegate
     
     override func viewDidLoad() {
         
-     //   self.addeventBtn.layer.cornerRadius = 25.0
-//        self.eventTitleTxt.layer.cornerRadius = 25.0
-//        self.descriptionEventTxt.layer.cornerRadius = 25.0
+        self.addeventBtn.layer.cornerRadius = 25.0
+        self.eventTitleTxt.layer.cornerRadius = 10
+        self.descriptionEventTxt.layer.cornerRadius = 10
         super.viewDidLoad()
         
-        self.eventImageView.layer.cornerRadius = 25.0
+        self.eventImageView.layer.cornerRadius = 10
 
         // Do any additional setup after loading the view.
     }

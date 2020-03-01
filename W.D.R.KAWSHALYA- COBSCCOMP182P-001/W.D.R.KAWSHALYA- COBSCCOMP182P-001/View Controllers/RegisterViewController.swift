@@ -16,9 +16,10 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
 
     @IBOutlet weak var fbUrlTxt: UITextField!
     
+    @IBOutlet weak var ImageView: UIImageView!
     @IBOutlet weak var regBtn2: UIButton!
     @IBOutlet weak var regbtn: UIImageView!
-    @IBOutlet weak var imageView: UIImageView!
+  //  @IBOutlet weak var imageView: UIImageView!
    // @IBOutlet weak var firstNameTxt: UITextField!
     @IBOutlet weak var fnameTxt: UITextField!
     
@@ -72,7 +73,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         
-        imageView.image = image
+        ImageView.image = image
         
         picker.dismiss(animated: true, completion: nil )
     }
@@ -185,12 +186,14 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         
         self.regBtn2.layer.cornerRadius = 25
-        self.userNameTxt.layer.cornerRadius = 25
-        self.fnameTxt.layer.cornerRadius = 25
-        self.lastNameTxt.layer.cornerRadius = 25
-        self.phoneNumberTxt.layer.cornerRadius = 25
-        self.passowrdTxr.layer.cornerRadius = 25
-        self.confPasswordTxt.layer.cornerRadius = 25
+        self.userNameTxt.layer.cornerRadius = 10
+        self.fnameTxt.layer.cornerRadius = 10
+        self.lastNameTxt.layer.cornerRadius = 10
+        self.phoneNumberTxt.layer.cornerRadius = 10
+        self.passowrdTxr.layer.cornerRadius = 10
+        self.confPasswordTxt.layer.cornerRadius = 10
+         self.fbUrlTxt.layer.cornerRadius = 10
+        self.ImageView.layer.cornerRadius = 10
         
         super.viewDidLoad()
         
