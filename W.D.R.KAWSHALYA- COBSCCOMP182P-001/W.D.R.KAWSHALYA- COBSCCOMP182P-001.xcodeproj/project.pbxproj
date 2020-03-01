@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,9 @@
 		2F61DB0F2406EB590069B072 /* W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61DB0E2406EB590069B072 /* W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.swift */; };
 		2F61DB1D240748310069B072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F61DB1C240748310069B072 /* Assets.xcassets */; };
 		2F641826240AFC2200419A3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F641825240AFC2200419A3B /* GoogleService-Info.plist */; };
+		2F944B8D240BBE7300987E62 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F944B8C240BBE7300987E62 /* Utilities.swift */; };
 		2FB2F6D1240B5F6000DE6483 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2F6D0240B5F6000DE6483 /* AddEventViewController.swift */; };
+		2FC02FF7240BFFB400395C44 /* UseerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC02FF6240BFFB400395C44 /* UseerProfileViewController.swift */; };
 		2FE2603E2409545A005F7416 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE2603D2409545A005F7416 /* LoginViewController.swift */; };
 		2FE26040240A2040005F7416 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE2603F240A2040005F7416 /* RegisterViewController.swift */; };
 		699033660B9B31C907909E7F /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001_W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C66762D019F0C18B002D8BA /* Pods_W_D_R_KAWSHALYA__COBSCCOMP182P_001_W_D_R_KAWSHALYA__COBSCCOMP182P_001UITests.framework */; };
@@ -62,7 +64,9 @@
 		2F61DB102406EB590069B072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F61DB1C240748310069B072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		2F641825240AFC2200419A3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2F944B8C240BBE7300987E62 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		2FB2F6D0240B5F6000DE6483 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		2FC02FF6240BFFB400395C44 /* UseerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseerProfileViewController.swift; sourceTree = "<group>"; };
 		2FE2603D2409545A005F7416 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2FE2603F240A2040005F7416 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		69CF5C75A10FEF861475CAFA /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001.debug.xcconfig"; path = "Target Support Files/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001/Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,7 +115,6 @@
 				2E28695B0FC57E10C7E41AE7 /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests.debug.xcconfig */,
 				ADD1D77D6C829274164F17E7 /* Pods-W.D.R.KAWSHALYA- COBSCCOMP182P-001Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -141,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				2F61DAEB2406EB580069B072 /* AppDelegate.swift */,
+				2FE6D40A240BB7CD0031B78D /* Helper */,
 				2FE26041240A2396005F7416 /* View Controllers */,
 				2F61DAEF2406EB580069B072 /* Main.storyboard */,
 				2F61DB1C240748310069B072 /* Assets.xcassets */,
@@ -178,8 +182,17 @@
 				2FE2603F240A2040005F7416 /* RegisterViewController.swift */,
 				2F22BC31240AA378009A3855 /* ForgetPasswordViewController.swift */,
 				2FB2F6D0240B5F6000DE6483 /* AddEventViewController.swift */,
+				2FC02FF6240BFFB400395C44 /* UseerProfileViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2FE6D40A240BB7CD0031B78D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2F944B8C240BBE7300987E62 /* Utilities.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		EC50566A20657A16AC4C0C22 /* Frameworks */ = {
@@ -439,8 +452,10 @@
 				2FE26040240A2040005F7416 /* RegisterViewController.swift in Sources */,
 				2F61DAF42406EB580069B072 /* W_D_R_KAWSHALYA__COBSCCOMP182P_001.xcdatamodeld in Sources */,
 				2F61DAEE2406EB580069B072 /* ViewController.swift in Sources */,
+				2FC02FF7240BFFB400395C44 /* UseerProfileViewController.swift in Sources */,
 				2FB2F6D1240B5F6000DE6483 /* AddEventViewController.swift in Sources */,
 				2F22BC32240AA378009A3855 /* ForgetPasswordViewController.swift in Sources */,
+				2F944B8D240BBE7300987E62 /* Utilities.swift in Sources */,
 				2F61DAEC2406EB580069B072 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

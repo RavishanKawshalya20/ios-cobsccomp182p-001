@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
+
+
 
 class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -15,8 +19,10 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var regBtn2: UIButton!
     @IBOutlet weak var regbtn: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var firstNameTxt: UITextField!
+   // @IBOutlet weak var firstNameTxt: UITextField!
+    @IBOutlet weak var fnameTxt: UITextField!
     
+    //@IBOutlet weak var firstNametxt: UITextField!
     @IBOutlet weak var confPasswordTxt: UITextField!
     @IBOutlet weak var passowrdTxr: UITextField!
     @IBOutlet weak var confirmPasswordTxt: UITextField!
@@ -82,20 +88,93 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     
     
     
-    @IBAction func registerButton(_ sender: Any) {
-       
-        let alert = UIAlertController(title: "Alert", message: "Do you want To save?", preferredStyle: .alert)
+    @IBAction func registerBtn(_ sender: Any) {
+   
         
-        let alertAction = UIAlertAction(title: "Ok", style : .default ,handler : nil)
-
-        let cancelAction = UIAlertAction(title: "Cancel", style : .cancel ,handler : nil)
+        if fnameTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastNameTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            userNameTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            phoneNumberTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            passowrdTxr.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            confPasswordTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+        {
+            
+            let alert = UIAlertController(title: "Alert", message: "Please fill all the fields", preferredStyle: .alert)
+            
+                    let alertAction = UIAlertAction(title: "Ok", style : .default ,handler : nil)
+            
+                    let cancelAction = UIAlertAction(title: "Cancel", style : .cancel ,handler : nil)
+            
+                    alert.addAction(alertAction)
+                    alert.addAction(cancelAction)
+            
+                    self.present(alert, animated: true, completion: nil)
+            
+        }
         
-        alert.addAction(alertAction)
-        alert.addAction(cancelAction)
+        let cleanedPassword = passowrdTxr.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+ 
+        func isPasswordValid(_ password : String) -> Bool{
+            let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+            return passwordTest.evaluate(with: password)
         
-        self.present(alert, animated: true, completion: nil)
-
+        }
         
+        if isPasswordValid(cleanedPassword) == false{
+            
+            let alert = UIAlertController(title: "Alert", message: "Password at least contain 8 charactors, Contain special charactor and number", preferredStyle: .alert)
+            
+            let alertAction = UIAlertAction(title: "Ok", style : .default ,handler : nil)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style : .cancel ,handler : nil)
+            
+            alert.addAction(alertAction)
+            alert.addAction(cancelAction)
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
+        let fname = fnameTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let lname = lastNameTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let uname = userNameTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let pnum = phoneNumberTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let fb = fbUrlTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let pwd = passowrdTxr.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        //let image = imageView.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        Auth.auth().createUser(withEmail: uname, password: pwd ) { (result, err) in
+            
+            
+            if err != nil{
+                
+              print("error")
+                
+            }
+            else{
+                
+                let db = Firestore.firestore()
+                
+                db.collection("users").addDocument(data: ["firstname" : fname, "lastname": lname]) { (error) in}
+                
+                if err != nil{
+                    print("error")
+                }
+            }
+         self.transitionToHome()
+            
+        }
+        
+    }
+    
+    func showError(_ message:String){
+        
+//       errorLabel.text = message
+//        errorLabel.alpha = 1
+        
+    }
+    
+    func transitionToHome() {
+        ///
     }
     
     
@@ -104,15 +183,17 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     
 
     override func viewDidLoad() {
+        
+        self.regBtn2.layer.cornerRadius = 25
+        self.userNameTxt.layer.cornerRadius = 25
+        self.fnameTxt.layer.cornerRadius = 25
+        self.lastNameTxt.layer.cornerRadius = 25
+        self.phoneNumberTxt.layer.cornerRadius = 25
+        self.passowrdTxr.layer.cornerRadius = 25
+        self.confPasswordTxt.layer.cornerRadius = 25
+        
         super.viewDidLoad()
         
-        self.regBtn2.layer.cornerRadius = 23
-        self.userNameTxt.layer.cornerRadius = 10
-// self.firstNameTxt.layer.cornerRadius = 10
-        self.lastNameTxt.layer.cornerRadius=10
-        self.phoneNumberTxt.layer.cornerRadius = 10
-        self.passowrdTxr.layer.cornerRadius = 10
-        self.confPasswordTxt.layer.cornerRadius = 10
         
         
         

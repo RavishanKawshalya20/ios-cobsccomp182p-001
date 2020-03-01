@@ -10,7 +10,8 @@ import UIKit
 
 class AddEventViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-   
+    @IBOutlet weak var addeventBtn: UIButton!
+    
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var descriptionEventTxt: UITextView!
     @IBOutlet weak var eventTitleTxt: UITextField!
@@ -75,7 +76,13 @@ class AddEventViewController: UIViewController , UIImagePickerControllerDelegate
     }
     
     override func viewDidLoad() {
+        
+     //   self.addeventBtn.layer.cornerRadius = 25.0
+//        self.eventTitleTxt.layer.cornerRadius = 25.0
+//        self.descriptionEventTxt.layer.cornerRadius = 25.0
         super.viewDidLoad()
+        
+        self.eventImageView.layer.cornerRadius = 25.0
 
         // Do any additional setup after loading the view.
     }
