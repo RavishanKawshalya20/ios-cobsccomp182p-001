@@ -7,18 +7,22 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class ForgetPasswordViewController: UIViewController {
 
+    @IBOutlet weak var forgetTxt: UITextField!
     @IBOutlet weak var resetBtn: UIButton!
     @IBOutlet weak var emailTxt: UITextField!
+    @IBOutlet weak var forgetErrorLable: UILabel!
     
     @IBOutlet weak var logoImage: UIImageView!
     
     
     @IBAction func foregetPasswordBtn(_ sender: Any) {
         
-        if emailTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+        if forgetTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             
             //return " User Name or Password Can't be Empty"
             
@@ -32,6 +36,23 @@ class ForgetPasswordViewController: UIViewController {
             alert.addAction(cancelAction)
             
             self.present(alert, animated: true, completion: nil)
+        }
+        else{
+            
+            
+//            let email = forgetTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+//
+//
+//            Auth.auth().signIn(Email: email){ (result, error) in
+//
+//                if error != nil{
+//                    self.forgetErrorLable.text = error!.localizedDescription
+//                    self.forgetErrorLable.alpha = 1
+//                }
+//
+//            }
+            
+            
         }
     }
     
@@ -50,7 +71,9 @@ class ForgetPasswordViewController: UIViewController {
     
     func setUpElements(){
         
-        Utilities.styleTextField(emailTxt)
+        forgetErrorLable.alpha = 0
+        
+        Utilities.styleTextField(forgetTxt)
         Utilities.styleHellowButton(resetBtn)
       //  Utilities.styleHellowButton(logoImage)
         

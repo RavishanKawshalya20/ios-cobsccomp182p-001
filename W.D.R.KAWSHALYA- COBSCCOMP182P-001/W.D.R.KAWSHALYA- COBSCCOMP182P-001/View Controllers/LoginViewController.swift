@@ -12,6 +12,7 @@ import Firebase
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var loginErrorLable: UILabel!
     @IBOutlet weak var loginbtnRadius: UIButton!
     //@IBOutlet weak var loginBtnR: UIButton!
     @IBOutlet weak var usernameTxt: UITextField!
@@ -40,7 +41,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 //return " User Name or Password Can't be Empty"
                 
-                let alert = UIAlertController(title: "Alert", message: "User Name or Password Can't be Empty", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Alert", message: "User Name or Password Can't be Empty" , preferredStyle: .alert)
                 
                 let alertAction = UIAlertAction(title: "Ok", style : .default ,handler : nil)
                 
@@ -54,29 +55,40 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
            // return nil
         //}
         
+        
+            else{
+                
+        
         let username = usernameTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-   //     Auth.auth().signIn(withEmail: email, password: password){ (result, error) in
+     
+        Auth.auth().signIn(withEmail: username, password: password){ (result, error) in
             
-//            if error != nil{
-//                self.errorLabel.text = error!.localizedDescription
-//                self.errorLabel.alpha = 1
-//
-//            }
-//            else{
-//                let homeViewController = storyboard?.instantiateInitialViewController(identifier: Constants.storyboard.homeViewController) as? homeViewController
-//
-//                view.window?.roadViewController = homeViewController
-//                view.window?.makeKeyAndVisible()
-//
-//            }
+            if error != nil{
+                self.loginErrorLable.text = error!.localizedDescription
+                self.loginErrorLable.alpha = 1
+          
+
+            }
+            else{
+                
+             
+                let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
+                
+                self.view.window?.rootViewController = homeViewController
+                self.view.window?.makeKeyAndVisible()
+                
+            }
         
        
         //}
     }
     
-    
+                
+        }
+        
+    }
     
     
     override func viewDidLoad() {
@@ -96,6 +108,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setUpElements(){
+        
+        loginErrorLable.alpha = 0
         
         Utilities.styleTextField(usernameTxt)
         Utilities.styleTextField(passwordTxt)
@@ -118,4 +132,4 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     */
 
-}
+        }

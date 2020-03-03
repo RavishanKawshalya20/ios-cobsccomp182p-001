@@ -13,9 +13,10 @@ import Foundation
 
 
 
-class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class RegisterViewController: UIViewController, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var fbUrlTxt: UITextField!
+    @IBOutlet weak var errorLable: UILabel!
     
     @IBOutlet weak var ImageView: UIImageView!
     @IBOutlet weak var regBtn2: UIButton!
@@ -35,10 +36,12 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var phoneNumberTxt: UITextField!
     
     
+    var imagePickerController = UIImagePickerController()
+    
         
     @IBAction func uploadImageBtn(_ sender: Any) {
         
-        let imagePickerController = UIImagePickerController()
+       var imagePickerController = UIImagePickerController()
         
         let actionSheet = UIAlertController(title: "Photo Source", message: "Choose Image Source", preferredStyle: .actionSheet)
         
@@ -60,8 +63,9 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         }))
         
         actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default , handler: { (UIAlertAction) in
+            var imagePickerController = UIImagePickerController()
             imagePickerController.sourceType = .photoLibrary
-            self.present(actionSheet, animated: true, completion: nil)
+            self.present(imagePickerController, animated: true, completion: nil)
         }))
         
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel , handler: nil ))
@@ -72,15 +76,18 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+//let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        if  let imageview2 = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+             
+        ImageView.image = imageview2
+    }
         
-        ImageView.image = image
-        
-        picker.dismiss(animated: true, completion: nil )
+        dismiss(animated: true, completion: nil )
     }
     
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil )
+        dismiss(animated: true, completion: nil )
     }
     
 //    override func didReceiveMemoryWarning() {
@@ -89,9 +96,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
 //    }
     
     
-    
-    @IBAction func registerBtn(_ sender: Any) {
-   
+    func validateFields() -> String? {
         
         if fnameTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastNameTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             userNameTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
@@ -99,43 +104,90 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
             passowrdTxr.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             confPasswordTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
         {
-            
-            let alert = UIAlertController(title: "Alert", message: "Please fill all the fields", preferredStyle: .alert)
-            
-                    let alertAction = UIAlertAction(title: "Ok", style : .default ,handler : nil)
-            
-                    let cancelAction = UIAlertAction(title: "Cancel", style : .cancel ,handler : nil)
-            
-                    alert.addAction(alertAction)
-                    alert.addAction(cancelAction)
-            
-                    self.present(alert, animated: true, completion: nil)
-            
+                return "Please fill all the fields"
         }
         
-        else{
         let cleanedPassword = passowrdTxr.text!.trimmingCharacters(in: .whitespacesAndNewlines)
- 
-        func isPasswordValid(_ password : String) -> Bool{
-            let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
-            return passwordTest.evaluate(with: password)
         
-        }
-        
-        if isPasswordValid(cleanedPassword) == false{
+        if Utilities.isPasswordValid(cleanedPassword) == false{
             
             let alert = UIAlertController(title: "Alert", message: "Password at least contain 8 charactors, Contain special charactor and number", preferredStyle: .alert)
             
-            let alertAction = UIAlertAction(title: "Ok", style : .default ,handler : nil)
+                        let alertAction = UIAlertAction(title: "Ok", style : .default ,handler : nil)
             
-            let cancelAction = UIAlertAction(title: "Cancel", style : .cancel ,handler : nil)
+                        let cancelAction = UIAlertAction(title: "Cancel", style : .cancel ,handler : nil)
             
-            alert.addAction(alertAction)
-            alert.addAction(cancelAction)
+                        alert.addAction(alertAction)
+                        alert.addAction(cancelAction)
             
-            self.present(alert, animated: true, completion: nil)
+                        self.present(alert, animated: true, completion: nil)
+            
         }
         
+        return nil
+    }
+    
+    
+    @IBAction func registerBtn(_ sender: Any) {
+   
+//
+//        if fnameTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastNameTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+//            userNameTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+//            phoneNumberTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+//            passowrdTxr.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+//            confPasswordTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+//        {
+//
+//            let alert = UIAlertController(title: "Alert", message: "Please fill all the fields", preferredStyle: .alert)
+//
+//                    let alertAction = UIAlertAction(title: "Ok", style : .default ,handler : nil)
+//
+//                    let cancelAction = UIAlertAction(title: "Cancel", style : .cancel ,handler : nil)
+//
+//                    alert.addAction(alertAction)
+//                    alert.addAction(cancelAction)
+//
+//                    self.present(alert, animated: true, completion: nil)
+//
+//        }
+//
+//        else{
+        
+            
+        
+            
+//        let cleanedPassword = passowrdTxr.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+//
+//        func isPasswordValid(_ password : String) -> Bool{
+//            let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+//            return passwordTest.evaluate(with: password)
+//
+//        }
+        
+//        if isPasswordValid(cleanedPassword) == false{
+//
+//            let alert = UIAlertController(title: "Alert", message: "Password at least contain 8 charactors, Contain special charactor and number", preferredStyle: .alert)
+//
+//            let alertAction = UIAlertAction(title: "Ok", style : .default ,handler : nil)
+//
+//            let cancelAction = UIAlertAction(title: "Cancel", style : .cancel ,handler : nil)
+//
+//            alert.addAction(alertAction)
+//            alert.addAction(cancelAction)
+//
+//            self.present(alert, animated: true, completion: nil)
+//        }
+        
+        
+        
+     let error = validateFields()
+        
+        if error != nil{
+            
+           showError("Please Check Again")
+        }
+        
+        else{
         
         let fname = fnameTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let lname = lastNameTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -144,54 +196,68 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         let fb = fbUrlTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let pwd = passowrdTxr.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         //let image = imageView.trimmingCharacters(in: .whitespacesAndNewlines)
+            
         
-        Auth.auth().createUser(withEmail: uname, password: pwd ) { user, error in
+        Auth.auth().createUser(withEmail: uname, password: pwd ) { ( result, err ) in
             
             
-            if error == nil && uname != nil{
-                
-              print("User Created")
-                
-                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-                changeRequest?.displayName = uname
-                changeRequest?.commitChanges{ error in
-                
-                    if error == nil{
-                        print("User Display Name Changed")
-                    }
-                
-                }
-                
+//            if error == nil && uname != nil && lname != nil && fname != nil && pnum != nil && fb != nil && pwd != nil{
+            
+            if err != nil{
+            
+             self.showError("Error Creating User")
             }
+//
+//                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+//                changeRequest?.displayName = uname
+//                changeRequest?.commitChanges{ error in
+//
+//                    if error == nil{
+//                        print("User Display Name Changed")
+//                    }
+//
+//                }
+//
+//            }
             else{
                 
                 print("Error Creating User")
                 self.dismiss(animated: false, completion: nil)
                 
-//                let db = Firestore.firestore()
-//
-//                db.collection("users").addDocument(data: ["firstname" : fname, "lastname": lname]) { (error) in}
-//
-//                if error != nil{
-//                    print("error")
-//                }
+                let db = Firestore.firestore()
+
+                db.collection("users").addDocument(data: ["firstName" : fname, "lastName": lname,"password": pwd, "userName": uname, "phoneNumber": pnum, "uid": result!.user.uid]) { (error) in
+
+                if error != nil{
+                    
+                    self.showError("Error Saving User Data")
+                }
             }
-         self.transitionToHome()
+                self.transitionToHome()
+                
+            }
+         
             
         }
         
-    }
+    //}
+        }
 }
     
     func showError(_ message:String){
         
-//       errorLabel.text = message
-//        errorLabel.alpha = 1
+       errorLable.text = message
+        errorLable.alpha = 1
         
     }
     
     func transitionToHome() {
-        ///
+        
+        let homeViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
+         
     }
     
     
@@ -212,6 +278,9 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
 //        self.ImageView.layer.cornerRadius = 10
         
         super.viewDidLoad()
+        
+       //imagePickerController.delegate = self
+        
         
         
         
@@ -254,5 +323,9 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+  
+    
 
 }

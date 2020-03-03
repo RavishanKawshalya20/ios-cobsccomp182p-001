@@ -53,11 +53,20 @@ class AddEventViewController: UIViewController , UIImagePickerControllerDelegate
     
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+//        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+//
+//        eventImageView.image = image
+//
+//        picker.dismiss(animated: true, completion: nil )
         
-        eventImageView.image = image
+        if  let imageview2 = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            
+            eventImageView.image = imageview2
+        }
         
-        picker.dismiss(animated: true, completion: nil )
+        dismiss(animated: true, completion: nil )
+    
+    
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -77,16 +86,24 @@ class AddEventViewController: UIViewController , UIImagePickerControllerDelegate
     
     override func viewDidLoad() {
         
-        self.addeventBtn.layer.cornerRadius = 25.0
-        self.eventTitleTxt.layer.cornerRadius = 10
-        self.descriptionEventTxt.layer.cornerRadius = 10
-        super.viewDidLoad()
-        
-        self.eventImageView.layer.cornerRadius = 10
+//        self.addeventBtn.layer.cornerRadius = 25.0
+//        self.eventTitleTxt.layer.cornerRadius = 10
+//        self.descriptionEventTxt.layer.cornerRadius = 10
+//        super.viewDidLoad()
+//
+//        self.eventImageView.layer.cornerRadius = 10
 
         // Do any additional setup after loading the view.
     }
     
+    
+    func setUpElements(){
+        
+        
+    
+        Utilities.styleHellowButton(addeventBtn)
+        
+    }
 
     /*
     // MARK: - Navigation
