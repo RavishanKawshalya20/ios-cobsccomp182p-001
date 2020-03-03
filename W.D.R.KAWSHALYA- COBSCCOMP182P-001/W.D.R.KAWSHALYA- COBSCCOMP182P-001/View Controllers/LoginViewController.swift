@@ -81,14 +81,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         
-        self.loginbtnRadius.layer.cornerRadius = 25.0
-        self.usernameTxt.layer.cornerRadius = 25.0
-        self.passwordTxt.layer.cornerRadius = 25.0
-        self.imageView.layer.cornerRadius = 25.0
+//        self.loginbtnRadius.layer.cornerRadius = 25.0
+//        self.usernameTxt.layer.cornerRadius = 25.0
+//        self.passwordTxt.layer.cornerRadius = 25.0
+//        self.imageView.layer.cornerRadius = 25.0
         
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        
+        setUpElements()
+        
+    }
+    
+    func setUpElements(){
+        
+        Utilities.styleTextField(usernameTxt)
+        Utilities.styleTextField(passwordTxt)
+        Utilities.styleHellowButton(loginbtnRadius)
+        
     }
     
      func touchesBagan(_ touches: Set<UITouch>, with event: UIEvent? ){

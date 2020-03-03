@@ -37,13 +37,23 @@ class ForgetPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        self.emailTxt.layer.cornerRadius = 25.0
-        self.resetBtn.layer.cornerRadius = 25.0
-        self.logoImage.layer.cornerRadius = 25.0
+//        self.emailTxt.layer.cornerRadius = 25.0
+//        self.resetBtn.layer.cornerRadius = 25.0
+//        self.logoImage.layer.cornerRadius = 25.0
         
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        setUpElements()
+    }
+    
+    func setUpElements(){
+        
+        Utilities.styleTextField(emailTxt)
+        Utilities.styleHellowButton(resetBtn)
+      //  Utilities.styleHellowButton(logoImage)
+        
     }
     
 

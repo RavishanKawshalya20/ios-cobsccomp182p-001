@@ -201,15 +201,15 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
 
     override func viewDidLoad() {
         
-        self.regBtn2.layer.cornerRadius = 25
-        self.userNameTxt.layer.cornerRadius = 10
-        self.fnameTxt.layer.cornerRadius = 10
-        self.lastNameTxt.layer.cornerRadius = 10
-        self.phoneNumberTxt.layer.cornerRadius = 10
-        self.passowrdTxr.layer.cornerRadius = 10
-        self.confPasswordTxt.layer.cornerRadius = 10
-         self.fbUrlTxt.layer.cornerRadius = 10
-        self.ImageView.layer.cornerRadius = 10
+//        self.regBtn2.layer.cornerRadius = 25
+//        self.userNameTxt.layer.cornerRadius = 10
+//        self.fnameTxt.layer.cornerRadius = 10
+//        self.lastNameTxt.layer.cornerRadius = 10
+//        self.phoneNumberTxt.layer.cornerRadius = 10
+//        self.passowrdTxr.layer.cornerRadius = 10
+//        self.confPasswordTxt.layer.cornerRadius = 10
+//         self.fbUrlTxt.layer.cornerRadius = 10
+//        self.ImageView.layer.cornerRadius = 10
         
         super.viewDidLoad()
         
@@ -218,7 +218,29 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         
         // Do any additional setup after loading the view.
         
+        setUpElements()
+        
     }
+    
+    func setUpElements(){
+        
+        
+        //errorLabel.alpha = 0
+        
+        Utilities.styleTextField(fnameTxt)
+        Utilities.styleTextField(lastNameTxt)
+        Utilities.styleTextField(userNameTxt)
+        Utilities.styleTextField(phoneNumberTxt)
+        Utilities.styleTextField(passowrdTxr)
+        Utilities.styleTextField(confPasswordTxt)
+        Utilities.styleFilledButton(regBtn2)
+        Utilities.styleTextField(fbUrlTxt)
+        
+    }
+    
+    
+    
+    
     override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
     }

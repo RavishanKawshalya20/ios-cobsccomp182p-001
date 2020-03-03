@@ -57,8 +57,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="xx2-iS-gle">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blurry-image-background-many-audience-concert-big-rock-concert_2313-788" translatesAutoresizingMaskIntoConstraints="NO" id="xx2-iS-gle">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724.00000000000011"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pDf-uO-7El">
                                 <rect key="frame" x="85" y="160" width="201" height="104"/>
@@ -80,20 +80,19 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b8C-2X-Aor">
                                 <rect key="frame" x="52" y="284" width="267" height="167"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="User Name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lhx-CN-zkS">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lhx-CN-zkS">
                                         <rect key="frame" x="0.0" y="0.0" width="267" height="45"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="XLH-Sd-8Uy"/>
                                             <constraint firstAttribute="width" constant="267" id="fxE-bR-TOf"/>
                                         </constraints>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Vv2-Wt-upR">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Vv2-Wt-upR">
                                         <rect key="frame" x="0.0" y="53" width="267" height="49"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="267" id="2R1-VR-fs7"/>
                                             <constraint firstAttribute="height" constant="49" id="iTc-7j-5LA"/>
@@ -145,7 +144,7 @@
                                     <segue destination="iOE-uE-M3D" kind="show" id="Wgg-Dd-ohV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GJ-VP-FoK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GJ-VP-FoK">
                                 <rect key="frame" x="183" y="471" width="136" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="sDA-C7-M5Q"/>
@@ -164,12 +163,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="oAC-vY-RPl" firstAttribute="trailing" secondItem="9GJ-VP-FoK" secondAttribute="trailing" constant="56" id="2r4-2f-edb"/>
                             <constraint firstItem="b8C-2X-Aor" firstAttribute="leading" secondItem="oAC-vY-RPl" secondAttribute="leading" constant="52" id="62y-mW-1uZ"/>
                             <constraint firstItem="xx2-iS-gle" firstAttribute="trailing" secondItem="oAC-vY-RPl" secondAttribute="trailing" id="80H-vf-aSG"/>
                             <constraint firstItem="oAC-vY-RPl" firstAttribute="trailing" secondItem="pDf-uO-7El" secondAttribute="trailing" constant="89" id="8uf-oF-cza"/>
                             <constraint firstItem="xx2-iS-gle" firstAttribute="leading" secondItem="oAC-vY-RPl" secondAttribute="leading" id="ApD-cV-82b"/>
                             <constraint firstItem="3cG-2t-OjB" firstAttribute="leading" secondItem="oAC-vY-RPl" secondAttribute="leading" constant="28" id="CVx-B7-WXi"/>
                             <constraint firstItem="2kn-BQ-gJF" firstAttribute="top" secondItem="9GJ-VP-FoK" secondAttribute="bottom" constant="183" id="HkB-sV-F6N"/>
+                            <constraint firstItem="9GJ-VP-FoK" firstAttribute="leading" secondItem="oAC-vY-RPl" secondAttribute="leading" constant="183" id="IsX-P6-UJc"/>
                             <constraint firstItem="pDf-uO-7El" firstAttribute="top" secondItem="oAC-vY-RPl" secondAttribute="top" constant="72" id="M79-mg-4eV"/>
                             <constraint firstItem="2kn-BQ-gJF" firstAttribute="leading" secondItem="3cG-2t-OjB" secondAttribute="trailing" constant="6" id="MGn-gO-VpM"/>
                             <constraint firstItem="oAC-vY-RPl" firstAttribute="trailing" secondItem="b8C-2X-Aor" secondAttribute="trailing" constant="56" id="VoT-T3-4b8"/>
@@ -177,9 +178,11 @@
                             <constraint firstItem="b8C-2X-Aor" firstAttribute="top" secondItem="pDf-uO-7El" secondAttribute="bottom" constant="20" id="cce-Bc-ZhU"/>
                             <constraint firstItem="xx2-iS-gle" firstAttribute="top" secondItem="oAC-vY-RPl" secondAttribute="top" id="dJQ-nh-QRA"/>
                             <constraint firstItem="oAC-vY-RPl" firstAttribute="trailing" secondItem="2kn-BQ-gJF" secondAttribute="trailing" constant="46" id="hEu-5k-WGV"/>
+                            <constraint firstItem="9GJ-VP-FoK" firstAttribute="top" secondItem="b8C-2X-Aor" secondAttribute="bottom" constant="20" id="hYg-5C-OL3"/>
                             <constraint firstItem="9GJ-VP-FoK" firstAttribute="top" secondItem="b8C-2X-Aor" secondAttribute="bottom" constant="20" id="lTG-fr-RVP"/>
                             <constraint firstItem="oAC-vY-RPl" firstAttribute="bottom" secondItem="3cG-2t-OjB" secondAttribute="bottom" constant="11" id="m9a-D4-QNN"/>
                             <constraint firstItem="3cG-2t-OjB" firstAttribute="top" secondItem="9GJ-VP-FoK" secondAttribute="bottom" constant="189" id="mIq-cj-KQx"/>
+                            <constraint firstItem="2kn-BQ-gJF" firstAttribute="top" secondItem="9GJ-VP-FoK" secondAttribute="bottom" constant="183" id="phL-DQ-hjP"/>
                             <constraint firstItem="2kn-BQ-gJF" firstAttribute="leading" secondItem="3cG-2t-OjB" secondAttribute="trailing" constant="6" id="q2l-Yw-zPv"/>
                             <constraint firstItem="b8C-2X-Aor" firstAttribute="top" secondItem="pDf-uO-7El" secondAttribute="bottom" constant="20" id="rI9-TD-NUs"/>
                             <constraint firstItem="pDf-uO-7El" firstAttribute="leading" secondItem="oAC-vY-RPl" secondAttribute="leading" constant="85" id="rLy-Oi-LHh"/>
@@ -208,8 +211,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="0NE-hl-cwW">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blurry-image-background-many-audience-concert-big-rock-concert_2313-788" translatesAutoresizingMaskIntoConstraints="NO" id="0NE-hl-cwW">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724.00000000000011"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mcz-OQ-36B">
@@ -245,18 +248,17 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EXw-Pi-Ff8">
                                         <rect key="frame" x="0.0" y="0.0" width="328" height="29"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="328" id="DJV-Cd-gdt"/>
                                             <constraint firstAttribute="height" constant="29" id="Say-9X-0Rf"/>
                                         </constraints>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="namePhonePad" textContentType="name"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n3m-zC-35F">
                                         <rect key="frame" x="0.0" y="40" width="328" height="29"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="sfb-zq-tnh"/>
                                             <constraint firstAttribute="width" constant="328" id="tcA-GT-TAV"/>
@@ -267,7 +269,6 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="weq-CC-9jG">
                                         <rect key="frame" x="0.0" y="80" width="328" height="29"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="328" id="kZP-Zy-puJ"/>
                                             <constraint firstAttribute="height" constant="29" id="uTw-Qe-Anu"/>
@@ -278,7 +279,6 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="User Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJo-yY-vhj">
                                         <rect key="frame" x="0.0" y="120" width="328" height="29"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="328" id="V2F-Qd-qAf"/>
                                             <constraint firstAttribute="height" constant="29" id="lEJ-7i-JhI"/>
@@ -289,7 +289,6 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Facebook Account URL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UX1-93-jlQ">
                                         <rect key="frame" x="0.0" y="160" width="328" height="29"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="P0Q-cf-Kur"/>
                                             <constraint firstAttribute="width" constant="328" id="gg3-St-mM6"/>
@@ -300,7 +299,6 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hWO-8H-7HN">
                                         <rect key="frame" x="0.0" y="200" width="328" height="29"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="Pu0-3n-ObO"/>
                                             <constraint firstAttribute="width" constant="328" id="Yux-Qz-PNi"/>
@@ -311,7 +309,6 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iSk-cH-mJk">
                                         <rect key="frame" x="0.0" y="240" width="328" height="29"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="328" id="Caj-eE-BM1"/>
                                             <constraint firstAttribute="height" constant="29" id="bOt-U6-IvY"/>
@@ -386,15 +383,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="Nz8-0p-QvW">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blurry-image-background-many-audience-concert-big-rock-concert_2313-788" translatesAutoresizingMaskIntoConstraints="NO" id="Nz8-0p-QvW">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641.00000000000011"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dnK-29-32N">
                                 <rect key="frame" x="59" y="330" width="266" height="90"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Type Your User Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKS-wz-nyd">
                                         <rect key="frame" x="0.0" y="0.0" width="266" height="40"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="266" id="Wpj-pq-6tx"/>
                                             <constraint firstAttribute="height" constant="40" id="mwb-4a-aTw"/>
@@ -488,7 +484,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="tWJ-eb-pCD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="party2" translatesAutoresizingMaskIntoConstraints="NO" id="tWJ-eb-pCD">
                                 <rect key="frame" x="0.0" y="88" width="375" height="291"/>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -693,7 +689,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="Yoo-Ay-ol3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="Yoo-Ay-ol3">
                                 <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KbD-uY-yXE">
@@ -901,11 +897,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="blurry-image-background-many-audience-concert-big-rock-concert_2313-788" width="626" height="417"/>
         <image name="icons8-add-30" width="30" height="30"/>
         <image name="icons8-home-page-30" width="30" height="30"/>
         <image name="icons8-male-user-30" width="30" height="30"/>
-        <image name="image2" width="1920" height="650"/>
         <image name="images" width="275" height="183"/>
         <image name="nibm" width="255.66667175292969" height="128.33332824707031"/>
+        <image name="party2" width="300" height="168"/>
     </resources>
 </document>
