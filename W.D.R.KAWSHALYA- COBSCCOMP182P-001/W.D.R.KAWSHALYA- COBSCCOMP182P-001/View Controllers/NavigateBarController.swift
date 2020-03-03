@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  NavigateBarController.swift
 //  W.D.R.KAWSHALYA- COBSCCOMP182P-001
 //
 //  Created by Ravishan Kawshalya on 03/03/2020.
@@ -8,20 +8,12 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class NavigateBarController: UITabBarController {
 
-
-    
-  
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-
-    @IBAction func homeSignOutBtn(_ sender: Any) {
-        
-        dismiss(animated: true, completion: nil)
     }
     
 

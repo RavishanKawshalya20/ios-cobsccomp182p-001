@@ -13,7 +13,7 @@ import Foundation
 
 
 
-class RegisterViewController: UIViewController, UIImagePickerControllerDelegate {
+class RegisterViewController: UIViewController, UIImagePickerControllerDelegate , UINavigationControllerDelegate{
 
     @IBOutlet weak var fbUrlTxt: UITextField!
     @IBOutlet weak var errorLable: UILabel!
@@ -37,6 +37,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate 
     
     
     var imagePickerController = UIImagePickerController()
+    
     
         
     @IBAction func uploadImageBtn(_ sender: Any) {
@@ -77,16 +78,18 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate 
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
 //let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        if  let imageview2 = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+        if  let uploadImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
              
-        ImageView.image = imageview2
+        ImageView.image = uploadImage
     }
         
         dismiss(animated: true, completion: nil )
     }
     
     
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
         dismiss(animated: true, completion: nil )
     }
     
@@ -121,6 +124,36 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate 
                         alert.addAction(cancelAction)
             
                         self.present(alert, animated: true, completion: nil)
+            
+        }
+        
+        if passowrdTxr.text?.trimmingCharacters(in: .whitespacesAndNewlines) !=
+            confPasswordTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
+            
+            self.showError("Password Not Match!")
+            
+            return nil
+            
+        }
+        
+       
+        
+        let cleanedEmail = userNameTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if Utilities.isValidEmail(cleanedEmail) == false{
+            
+            let alert = UIAlertController(title: "Alert", message: "Enter Valid E-mail adress", preferredStyle: .alert)
+            
+            let alertAction = UIAlertAction(title: "Ok", style : .default ,handler : nil)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style : .cancel ,handler : nil)
+            
+            alert.addAction(alertAction)
+            alert.addAction(cancelAction)
+            
+            self.present(alert, animated: true, completion: nil)
+            
+            
             
         }
         
@@ -196,6 +229,14 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate 
         let fb = fbUrlTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let pwd = passowrdTxr.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         //let image = imageView.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cpwd = confPasswordTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            
+            
+           
+            
+            
+            
             
         
         Auth.auth().createUser(withEmail: uname, password: pwd ) { ( result, err ) in
@@ -253,7 +294,8 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate 
     
     func transitionToHome() {
         
-        let homeViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        let homeViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? NavigateBarController
+        //HomeViewController
         
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
@@ -294,7 +336,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate 
     func setUpElements(){
         
         
-        //errorLabel.alpha = 0
+        errorLable.alpha = 0
         
         Utilities.styleTextField(fnameTxt)
         Utilities.styleTextField(lastNameTxt)

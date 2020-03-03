@@ -7,17 +7,26 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
+import Foundation
+import FirebaseStorage
+import FirebaseDatabase
 
 class AddEventViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var errorLableevent: UILabel!
     @IBOutlet weak var addeventBtn: UIButton!
     
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var descriptionEventTxt: UITextView!
     @IBOutlet weak var eventTitleTxt: UITextField!
     
-    
+      //var ref = FIRDatabaseRefernce?
   
+
+    
+    
     @IBAction func insertEventImageBtn(_ sender: Any) {
         
         
@@ -78,9 +87,86 @@ class AddEventViewController: UIViewController , UIImagePickerControllerDelegate
     }
     
     
+    @IBAction func eventSignOutBtn(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        //
+        //        let mainmenu = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.signOutController) as? ViewController
+        //
+        //        self.view.window?.rootViewController = mainmenu
+        //        self.view.window?.makeKeyAndVisible()
+    }
     
+    
+     func validateFields() -> String? {
+    
+        if eventTitleTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || descriptionEventTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            
+            return "Please fill all the fields"
+    }
+        
+        return nil
+    }
     
     @IBAction func addEventBtn(_ sender: Any) {
+        
+        
+        let error = validateFields()
+        
+        if error != nil{
+            
+            showError("Please Check Again")
+        }
+            
+        else{
+            
+            let title = eventTitleTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let des = descriptionEventTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+//
+//
+//            let ref = FIRDataBase.database().reffernce()
+//            let userReffernce = ref.chaild("events")
+//
+//            Auth.auth().setValue("title": title, "description": des ) { ( result, err ) in
+//
+//
+//                //            if error == nil && uname != nil && lname != nil && fname != nil && pnum != nil && fb != nil && pwd != nil{
+//
+//                if err != nil{
+//
+//                    self.showError("Error Creating Event")
+//                }
+//                   }
+//                else{
+//
+//                    print("Error Creating Event")
+//                    self.dismiss(animated: false, completion: nil)
+//
+//                    let db = Firestore.firestore()
+//
+//                    db.collection("events").addDocument(data: ["title" : title, "description": des, "eid": result!.events.eid]) { (error) in
+//
+//                        if error != nil{
+//
+//                            self.showError("Error Saving User Data")
+//                        }
+//                    }
+//                    self.transitionToHome()
+//
+//                }
+            
+        
+            }
+                       
+                
+        
+    }
+    
+    
+    func showError(_ message:String){
+        
+        errorLableevent.text = message
+        errorLableevent.alpha = 1
         
     }
     
@@ -99,9 +185,21 @@ class AddEventViewController: UIViewController , UIImagePickerControllerDelegate
     
     func setUpElements(){
         
-        
+        errorLableevent.alpha = 0
     
-        Utilities.styleHellowButton(addeventBtn)
+       
+    
+            
+            descriptionEventTxt.layer.cornerRadius = 15
+            Utilities.styleFilledButton(addeventBtn)
+         Utilities.styleTextField(eventTitleTxt)
+
+        
+        
+        
+        
+        
+        
         
     }
 

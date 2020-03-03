@@ -18,6 +18,10 @@
 		2F61DB1D240748310069B072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F61DB1C240748310069B072 /* Assets.xcassets */; };
 		2F641826240AFC2200419A3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F641825240AFC2200419A3B /* GoogleService-Info.plist */; };
 		2F944B8D240BBE7300987E62 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F944B8C240BBE7300987E62 /* Utilities.swift */; };
+		2FA7412E240EAE95009CE04E /* NavigateBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA7412D240EAE95009CE04E /* NavigateBarController.swift */; };
+		2FA74130240EB8BD009CE04E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA7412F240EB8BD009CE04E /* NavigationViewController.swift */; };
+		2FA74132240EFD1F009CE04E /* TableCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA74131240EFD1F009CE04E /* TableCellViewController.swift */; };
+		2FA74134240F0B4E009CE04E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA74133240F0B4E009CE04E /* Image.swift */; };
 		2FA9AE38240E28930002D52B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA9AE37240E28930002D52B /* Constants.swift */; };
 		2FA9AE3A240E2B740002D52B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA9AE39240E2B740002D52B /* HomeViewController.swift */; };
 		2FB2F6D1240B5F6000DE6483 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2F6D0240B5F6000DE6483 /* AddEventViewController.swift */; };
@@ -67,6 +71,10 @@
 		2F61DB1C240748310069B072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		2F641825240AFC2200419A3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2F944B8C240BBE7300987E62 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		2FA7412D240EAE95009CE04E /* NavigateBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateBarController.swift; sourceTree = "<group>"; };
+		2FA7412F240EB8BD009CE04E /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		2FA74131240EFD1F009CE04E /* TableCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellViewController.swift; sourceTree = "<group>"; };
+		2FA74133240F0B4E009CE04E /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		2FA9AE37240E28930002D52B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2FA9AE39240E2B740002D52B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FB2F6D0240B5F6000DE6483 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +196,10 @@
 				2FB2F6D0240B5F6000DE6483 /* AddEventViewController.swift */,
 				2FC02FF6240BFFB400395C44 /* UseerProfileViewController.swift */,
 				2FA9AE39240E2B740002D52B /* HomeViewController.swift */,
+				2FA7412D240EAE95009CE04E /* NavigateBarController.swift */,
+				2FA7412F240EB8BD009CE04E /* NavigationViewController.swift */,
+				2FA74131240EFD1F009CE04E /* TableCellViewController.swift */,
+				2FA74133240F0B4E009CE04E /* Image.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -455,8 +467,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FE2603E2409545A005F7416 /* LoginViewController.swift in Sources */,
+				2FA74130240EB8BD009CE04E /* NavigationViewController.swift in Sources */,
 				2FE26040240A2040005F7416 /* RegisterViewController.swift in Sources */,
 				2F61DAF42406EB580069B072 /* W_D_R_KAWSHALYA__COBSCCOMP182P_001.xcdatamodeld in Sources */,
+				2FA74134240F0B4E009CE04E /* Image.swift in Sources */,
 				2F61DAEE2406EB580069B072 /* ViewController.swift in Sources */,
 				2FC02FF7240BFFB400395C44 /* UseerProfileViewController.swift in Sources */,
 				2FA9AE38240E28930002D52B /* Constants.swift in Sources */,
@@ -464,6 +478,8 @@
 				2FA9AE3A240E2B740002D52B /* HomeViewController.swift in Sources */,
 				2F22BC32240AA378009A3855 /* ForgetPasswordViewController.swift in Sources */,
 				2F944B8D240BBE7300987E62 /* Utilities.swift in Sources */,
+				2FA74132240EFD1F009CE04E /* TableCellViewController.swift in Sources */,
+				2FA7412E240EAE95009CE04E /* NavigateBarController.swift in Sources */,
 				2F61DAEC2406EB580069B072 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

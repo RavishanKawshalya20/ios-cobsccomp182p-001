@@ -73,11 +73,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
             else{
                 
-             
-                let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
-                
+//
+//                let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
+
+                let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as?  NavigateBarController
+
+
                 self.view.window?.rootViewController = homeViewController
                 self.view.window?.makeKeyAndVisible()
+                
+//                let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeVCNavigation") as!  NavigateBarController
+//
+//                homeViewController.selectedViewController = homeViewController.viewControllers?[HomeVCNavigation]
+//                self.present(homeViewController, animated:  true, completion: nil)
                 
             }
         

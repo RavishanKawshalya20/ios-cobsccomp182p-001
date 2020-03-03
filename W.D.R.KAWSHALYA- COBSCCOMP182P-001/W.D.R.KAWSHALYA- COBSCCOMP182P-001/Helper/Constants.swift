@@ -14,11 +14,17 @@ struct Constants {
     struct Storyboard {
         
        static let homeViewController = "HomeVCNavigation"
+    
         
         
+    
+     static let signOutController = "MainMenuVC"
+    
+    }
+    
         
     }
     
 
 
-}
+
