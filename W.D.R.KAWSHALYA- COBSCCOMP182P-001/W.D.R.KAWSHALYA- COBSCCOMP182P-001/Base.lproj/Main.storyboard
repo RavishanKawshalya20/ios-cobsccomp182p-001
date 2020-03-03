@@ -259,6 +259,7 @@
                                         </state>
                                         <connections>
                                             <action selector="loginBtn:" destination="jdu-00-oLw" eventType="touchUpInside" id="Hu8-Ph-4G9"/>
+                                            <segue destination="SP2-oe-iEp" kind="showDetail" id="wVT-TW-DZ1"/>
                                         </connections>
                                     </button>
                                 </subviews>
